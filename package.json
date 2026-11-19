@@ -1,0 +1,12 @@
+{
+  "name": "simcardo-connectivity",
+  "private": true,
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test tests/*.test.cjs",
+    "validate": "trek-plugin validate .",
+    "pack": "trek-plugin pack . --out plugin.zip"
+  },
+  "devDependencies": { "trek-plugin-sdk": "1.7.0" }
+}

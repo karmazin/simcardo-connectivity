@@ -1,0 +1,23 @@
+.layout { margin: 1rem auto; max-width: 46rem; padding: 0 1rem 1.5rem; }
+.layout h1 { margin: 0; font-size: 1.75rem; line-height: 1.2; }
+.layout p { margin: 0; line-height: 1.5; }
+.layout .eyebrow { font-size: .74rem; font-weight: 700; letter-spacing: .12em; }
+.layout .small { font-size: .82rem; }
+.layout .trek-card { padding: 1rem; }
+.fields { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .8rem; }
+.fields label { display: flex; flex-direction: column; gap: .35rem; min-width: 0; }
+.fields input, .fields select { min-width: 0; width: 100%; box-sizing: border-box; }
+.fields .check { flex-direction: row; align-items: center; gap: .55rem; }
+.fields .check input { width: auto; }
+.layout button { min-height: 44px; }
+.layout :focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+.results { list-style: none; padding: 0; margin: 0; }
+.results h2 { font-size: 1.1rem; margin: 0; }
+.results .trek-row { justify-content: space-between; flex-wrap: wrap; gap: .5rem; }
+@media (min-width: 900px) {
+  .layout { max-width: 72rem; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); align-items: start; gap: 1rem; }
+  .layout > header { grid-column: 1 / -1; }
+  #offers { min-width: 0; }
+  #status:empty { display: none; }
+}
+@media (max-width: 440px) { .fields { grid-template-columns: minmax(0,1fr); } }

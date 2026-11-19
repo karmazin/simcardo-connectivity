@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Travel eSIM by Simcardo</title>
+  <!-- trek:ui -->
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="trek-stack layout">
+    <header class="trek-stack">
+      <p class="trek-muted eyebrow">TRIP CONNECTIVITY</p>
+      <h1 class="trek-title">Travel eSIM by Simcardo</h1>
+      <p class="trek-muted">Find mobile data for this itinerary. Offers are from Simcardo, not a comparison of providers.</p>
+    </header>
+    <form id="form" class="trek-card trek-stack">
+      <label class="trek-label" for="countries">Countries and territories</label>
+      <input class="trek-input" id="countries" name="countries" placeholder="e.g. JP or FR, DE, CZ" autocomplete="off" maxlength="48" aria-describedby="country-help" required>
+      <p class="trek-muted small" id="country-help">Enter two-letter country codes. One eSIM must cover them all.</p>
+      <div class="fields">
+        <label class="trek-label">First day <input class="trek-input" type="date" name="startDate" required></label>
+        <label class="trek-label">Last day <input class="trek-input" type="date" name="endDate" required></label>
+        <label class="trek-label">Usage profile
+          <select class="trek-select" name="profile" data-trek-native>
+            <option value="light">Light — maps and messages</option>
+            <option value="normal" selected>Typical — maps, social and browsing</option>
+            <option value="heavy">Heavy — frequent video</option>
+          </select>
+        </label>
+        <label class="trek-label">Or total GB (optional)
+          <input class="trek-input" type="number" name="dataGb" min="0.1" max="1000" step="0.1" inputmode="decimal" placeholder="e.g. 5">
+        </label>
+        <label class="trek-label">Price currency
+          <select class="trek-select" name="currency" data-trek-native>
+            <option>EUR</option><option>USD</option><option>GBP</option><option>CZK</option>
+            <option>JPY</option><option>CHF</option><option>CAD</option><option>AUD</option>
+            <option>PLN</option><option>SEK</option><option>DKK</option><option>NOK</option>
+          </select>
+        </label>
+        <label class="trek-label check"><input name="hotspot" type="checkbox"> Require a verified hotspot</label>
+      </div>
+      <p class="trek-muted small">When you check prices, TREK sends only these quote details to Simcardo. No name, reservation, account or itinerary ID is sent.</p>
+      <button id="search" class="trek-btn trek-btn--primary" type="submit">Check Simcardo plans</button>
+    </form>
+    <section id="offers" class="trek-stack" aria-label="Matching eSIM plans">
+      <p id="status" class="trek-muted" role="status" aria-live="polite"></p>
+      <ul id="results" class="trek-stack results"></ul>
+    </section>
+  </main>
+  <script src="./app.js" defer></script>
+</body>
+</html>

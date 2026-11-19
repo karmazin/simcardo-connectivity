@@ -1,0 +1,16 @@
+{
+  "id": "simcardo-connectivity",
+  "name": "Travel eSIM by Simcardo",
+  "version": "0.1.0",
+  "apiVersion": 1,
+  "type": "trip-page",
+  "trek": ">=5.1.4 <5.2.0",
+  "author": "Simcardo",
+  "description": "Check mobile data coverage for a dated trip and open matching travel eSIMs from the itinerary.",
+  "icon": "Smartphone",
+  "homepage": "https://simcardo.com/en/travel-esim-mcp",
+  "tags": ["esim", "connectivity", "itinerary"],
+  "license": "MIT",
+  "permissions": ["db:read:trips", "http:outbound:simcardo.com"],
+  "egress": ["simcardo.com"]
+}
